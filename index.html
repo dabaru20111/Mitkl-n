@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKTLÄN -Company</title>
+
+    <style>
+        /* 1. RESET Y TIPOGRAFÍA BASE */
+        body {
+            font-family: 'Georgia', serif; /* Tipo de letra más elegante */
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Fondo blanco roto */
+            color: #333; /* Texto oscuro */
+            line-height: 1.6;
+        }
+
+        /* 2. CABECERA (HEADER) Y NAVEGACIÓN */
+        header {
+            background-color: #fb9c2f; /* Fondo de cabecera blanco puro */
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            font-weight: normal;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a0a0a0; /* Gris más claro al pasar el ratón */
+        }
+
+        /* 3. CONTENIDO PRINCIPAL (MAIN) */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto; /* Centra el contenido */
+        }
+
+        section {
+            padding: 40px 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* 4. SECCIÓN DE PRODUCTOS (GALERÍA) */
+        #productos h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .galeria-productos {
+            display: flex; /* Para poner los productos en fila */
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px; /* Espacio entre productos */
+        }
+
+        .producto {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            width: 300px; /* Ancho fijo para las tarjetas */
+            text-align: center;
+        }
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain; /* Asegura que la imagen se vea bien */
+            margin-bottom: 15px;
+        }
+
+        .precio {
+            font-size: 1.5em;
+            color: #964B00; /* Color marrón/oro suave para el precio */
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        /* 5. BOTONES */
+        button {
+            background-color: #333; /* Fondo oscuro elegante */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* 6. FORMULARIO DE CONTACTO */
+        #contacto form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        #contacto label, #contacto input, #contacto textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #contacto input, #contacto textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box; /* Crucial para el padding */
+        }
+
+        #contacto button {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* 7. PIE DE PÁGINA (FOOTER) */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Velas de Cempasúchil</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Velas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#carrito">🛒 Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Bienvenido a nuestra Tienda de la Escuela</h2>
+            <p>La luz que te da</p>
+            <p><a href="#productos"><button>Explorar Catálogo</button></a></p>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestras Velas de Diseño</h2>
+
+            <div class="galeria-productos">
+
+                <article class="producto">
+                    <h3>Vela</h3>
+                    <img src="https://via.placeholder.com/300x250/F0F0F0/333333?text=Floral" alt="Velas tipo:">
+                    <p class="precio">100$</p>
+                    <p>Una figura de:.</p>
+                    <button>Añadir al Carrito</button>
+                </article>
+
+                <article class="producto">
+                    <h3>Vela</h3>
+                    <img src="https://via.placeholder.com/300x250/C0C0C0/333333?text=Amaderado" alt="Velas tipo:">
+                    <p class="precio">150$</p>
+                    <p>Una figura de:.</p>
+                    <button>Añadir al Carrito</button>
+                </article>
+                
+                <article class="producto">
+                    <h3>Vela</h3>
+                    <img src="https://via.placeholder.com/300x250/E0E0E0/333333?text=Cítrico" alt="Velas tipo:">
+                    <p class="precio">200$</p>
+                    <p>Una figura de:.</p>
+                    <button>Añadir al Carrito</button>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form action="https://formsubmit.co/dromeroramirez@colegiochimalistac.edu.mx" method="POST">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <input type="hidden" name="_next" value="gracias.html">
+
+  <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ABP Colegio Chimalistac 3^Naranja. Todos los derechos reservados.</p>
+        <p><a href="#">Política de Privacidad</a> | <a href="#">Aviso Legal</a></p>
+    </footer>
+
+</body>
+</html>
