@@ -1,2 +1,2 @@
-# Mitkl-n
+# Miktlan
 pagina web escolar
