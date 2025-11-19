@@ -173,6 +173,26 @@
         footer a:hover {
             color: #fff;
         }
+        .carucel{
+            width: 100%;
+          height: 250px;
+          overflow: hidden;
+          position: relative;
+        }
+        .carucel img{
+            width: 100%;
+         height: 100%;
+          object-fit: contain;
+          position: absolute;
+          top: 0;
+          left: 100%;      /* todas fuera de pantalla */
+          opacity: 0;
+          transition: all 0.5s ease;
+        }
+        .carucel img.activa{
+            left: 0;         /* imagen visible */
+          opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -184,7 +204,6 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Velas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#carrito">🛒 Carrito</a></li>
             </ul>
         </nav>
     </header>
@@ -204,18 +223,24 @@
 
                 <article class="producto">
                     <h3>Vela diseño 1</h3>
-                    <img src="https://via.placeholder.com/300x250/F0F0F0/333333?text=Floral" alt="Velas tipo:">
-                    <p class="precio">80$</p>
+                    <div class="carucel">
+                     <img src="https://thumbs.dreamstime.com/z/un-vector-de-vela-medio-fundido-o-ilustraci%C3%B3n-color-lista-velas-fundidas-en-soporte-marr%C3%B3n-con-dibujo-vectorial-llama-anaranjado-160152465.jpg" class="activa">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2142/2142717.png">
+                     <img src="https://images.vexels.com/media/users/3/127372/isolated/preview/ef50e67973d7cfa7b04037cddf914a1e-icono-de-navidad-luz-de-vela.png">
+                    </div>
+                    <p class="precio">79$</p>
                     <p>Una figura de:.</p>
-                    <button>Añadir al Carrito</button>
                 </article>
 
                 <article class="producto">
                     <h3>Vela diseño 2</h3>
-                    <img src="https://via.placeholder.com/300x250/C0C0C0/333333?text=Amaderado" alt="Velas tipo:">
+                    <div class="carucel">
+                     <img src="https://via.placeholder.com/300x250/F0F0F0/333333?text=Floral" class="activa">
+                    <img src="https://via.placeholder.com/300x250/F0F0F0/333333?text=Floral">
+                     <img src="https://via.placeholder.com/300x250/F0F0F0/333333?text=Floral">
+                    </div>
                     <p class="precio">150$</p>
                     <p>Una figura de:.</p>
-                    <button>Añadir al Carrito</button>
                 </article>
                 
 
@@ -256,6 +281,17 @@
         <p>&copy; 2025 ABP Colegio Chimalistac 3^Naranja. Todos los derechos reservados.</p>
         <p><a href="#">Política de Privacidad</a> | <a href="#">Aviso Legal</a></p>
     </footer>
+<script>
+document.querySelectorAll('.carucel').forEach(carucel => {
+    let index = 0;
+    const imagenes = carucel.querySelectorAll('img');
 
+    setInterval(() => {
+        imagenes[index].classList.remove('activa');
+        index = (index + 1) % imagenes.length;
+        imagenes[index].classList.add('activa');
+    }, 2000); // cambia cada 2 segundos
+});
+</script>
 </body>
 </html>
